@@ -1,15 +1,24 @@
 import React, { useContext } from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useNavigate } from 'react-router-dom';
 import './index.scss';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import { ValueContext } from '../../App';
+import { SetValueContext, ValueContext } from '../../App';
 function Layout() {
     const value = useContext(ValueContext);
+    const navigate = useNavigate();
+    const setvalue = useContext(SetValueContext);
+    const navigationHome = () => {
+        navigate('/');
+        setvalue({
+            organization: '',
+            testReport: ''
+        });
+    }
     return (
         <div className='main-content'>
             <div className="layout">
                 <div className='layout-title'>
-                    <div className='brand-name'>
+                    <div className='brand-name' onClick={navigationHome}>
                         Levo
                     </div>
                     {
