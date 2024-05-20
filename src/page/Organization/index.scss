@@ -1,0 +1,59 @@
+.organization-contener {
+    width: 85%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .organization-title {
+        margin-bottom: 2rem;
+
+        .organization-title-text {
+            color: rgb(139, 55, 160);
+            font-size: 2rem;
+            font-weight: bold;
+            padding: 1.25rem 0;
+        }
+
+        .organization-title-sub-text {
+            color: rgb(243, 101, 212);
+            font-weight: 600;
+        }
+    }
+
+    .organization-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+
+        .organization-content {
+            border: 3px solid rgb(138, 167, 187);
+            width: 500px;
+            background-color: rgb(204, 212, 218);
+            display: flex;
+            justify-content: space-between;
+            padding: 30px 45px;
+            font-size: x-large;
+            font-weight: 700;
+
+            align-items: center;
+            .organization-icon {
+                svg {
+                    background-color: white;
+                    border-radius: 50%  ;
+                    padding: .25rem;
+                    font-size: 2rem;
+                    color: gray;
+                }
+            }
+
+            .organization-name {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            color: white;
+            }
+        }
+    }
+}
