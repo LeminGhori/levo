@@ -6,6 +6,7 @@
     justify-content: center;
 
     .organization-title {
+        margin-top: 2rem;
         margin-bottom: 2rem;
 
         .organization-title-text {
@@ -30,7 +31,7 @@
         .organization-content {
             border: 3px solid rgb(138, 167, 187);
             width: 500px;
-            background-color: rgb(204, 212, 218);
+            background-color: #e3e3e3;
             display: flex;
             justify-content: space-between;
             padding: 30px 45px;

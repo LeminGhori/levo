@@ -1,0 +1,60 @@
+.test-report-contener {
+    width: 85%;
+    padding: 2rem;
+
+    .test-report-title {
+        color: rgba(87, 87, 212, 0.9);
+        font-size: 1.25rem;
+        font-weight: 600;
+        padding-bottom: 2rem;
+    }
+
+    .test-report-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        .test-report-data-contener {
+            display: flex;
+            padding: .5rem;
+            background-color: #e3e3e3;
+            justify-content: space-between;
+
+            .test-report-content {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+
+                .report-name {
+                    font-size: 1.25rem;
+                    color: #16161694;
+                    font-weight: 600;
+                    padding-bottom: .25rem;
+                }
+
+                .report-time {
+                    font-size: .75rem;
+                    color: #80808099;
+                    font-weight: 700;
+                    display: flex;
+                    gap: .5rem;
+                }
+            }
+
+            .test-report-data {
+                display: flex;
+                gap: 2.5rem;
+                align-items: center;
+                padding-right: 2.5rem;
+
+                .report-passed {
+                    color: green;
+                }
+
+                .report-failed {
+                    color: rgb(201, 40, 40);
+                }
+            }
+        }
+    }
+}
