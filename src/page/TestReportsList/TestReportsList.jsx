@@ -54,25 +54,34 @@ function TestReportsList() {
                             <div className='test-report-list'>
                                 {
                                     testReport?.map((item) => {
+                                        // Parse start_date to Date object
+                                        const startDate = new Date(item.start_date);
+
+                                        // Calculate elapsed time since start_date
+                                        const currentTime = new Date();
+                                        const elapsedTime = Math.floor((currentTime - startDate) / 60000); // in minutes
+
+                                        // Format duration
+                                        const duration = Math.floor(item.duration / 60000); // Convert duration to minutes
+
                                         return (
-                                            <div className='test-report-data-contener' key={item?.id} onClick={() => {
+                                            <div className='test-report-data-contener' key={item.id} onClick={() => {
                                                 handleReport(item);
                                                 navigate('/test-reports-details');
                                             }}>
-                                                <div className='test-report-content' >
-                                                    <div className='report-name'>{item?.name}</div>
+                                                <div className='test-report-content'>
+                                                    <div className='report-name'>{item.name}</div>
                                                     <div className='report-time'>
-                                                        <div className='report-ago'>2 min ago</div>{" - "}
-                                                        <div className='report-long'>10 min long</div>
+                                                        <div className='report-ago'>{elapsedTime} min ago</div>{" - "}
+                                                        <div className='report-long'>{duration} min long</div>
                                                     </div>
                                                 </div>
                                                 <div className='test-report-data'>
-                                                    <div className='report-passed'>{item?.succeed_tests} passed</div>
-                                                    <div className='report-failed'>{item?.failed_tests} failed</div>
+                                                    <div className='report-passed'>{item.succeed_tests} passed</div>
+                                                    <div className='report-failed'>{item.failed_tests} failed</div>
                                                 </div>
                                             </div>
-
-                                        )
+                                        );
                                     })
                                 }
                             </div>
